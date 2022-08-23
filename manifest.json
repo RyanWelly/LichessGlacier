@@ -1,0 +1,18 @@
+{
+
+    "manifest_version": 2,
+    "name": "LichessGlacier",
+    "version": "1.0",
+  
+    "description": "Removes bullet and 3+0 buttons from homepage, removes easy access to ultra/hyper/bullet tournaments.",
+  
+  
+    "content_scripts": [
+      {
+        "matches": ["https://lichess.org/"],
+        "js": ["glacier.js"]
+      }
+    ]
+  
+  }
+  
