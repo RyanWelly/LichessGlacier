@@ -18,16 +18,28 @@ function removeButtons() {
     let LobbyTab = document.querySelectorAll('span[role^="tab"]')[1]
     LobbyTab.remove()
 
-    //add event listener on the other two lobby tabs to automatically call all these removals again.
-
-
     let CorrTab = document.querySelectorAll('span[role^="tab"]')[1]
-    CorrTab.remove()
-    console.log("test")
+    CorrTab.remove() //TODO: Clicking these buttons currently resets the removed buttons, need to fix that.
+
+
+    //TODO: Resize the div the buttons are contained in, to make up for the space freed by removing the buttons.
 }
 
+function removeBulletTournamentsLobby() {
+    let tournamentButtons = document.querySelector('div[class="lobby__spotlights"]')
+    let listLobbyTournaments = tournamentButtons.childNodes
+    
+    for (const tourney of listLobbyTournaments) {
+        if(tourney.textContent.includes("Bullet")) {tourney.remove()}
+        //make the button red in colour, and not clickable.
+    }
+
+     
+}
 
 removeButtons()
+removeBulletTournamentsLobby()
+
 
 
 
