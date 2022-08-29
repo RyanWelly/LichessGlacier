@@ -9,7 +9,7 @@
   
     "content_scripts": [
       {
-        "matches": ["https://lichess.org/"],
+        "matches": ["https://lichess.org/*"],
         "js": ["glacier.js"]
       }
     ]
